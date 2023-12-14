@@ -28,6 +28,19 @@ public class PangrammChecker  {
             }
         }
 
+        // wenn deutsches Alphabet mit Umlauten und ß gewählt wurde, dann noch diese prüfen
+        if (alphabet == AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT) {
+
+            // über alle Zeichen von text iterieren
+            for (char zeichen : "äöüß".toCharArray()) {
+
+                // wenn das Zeichen nicht im Text vorkommt, ist es kein Pangramm
+                if (textNormalisiert.indexOf(zeichen) < 0) {
+
+                    return false;
+                }
+            }
+        }
 
         return true;
     }

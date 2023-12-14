@@ -13,7 +13,7 @@ public class App  {
         System.out.println("\nIst '" + text1 + "' ein Pangramm? " + ergebnis1 + "\n");
 
         final String text2 = "Falsches Üben von Xylophonmusik quält jeden größeren Zwerg";
-        boolean ergebnis2 = istPangramm(text2, ALPHABET_ENGLISCH);
+        boolean ergebnis2 = istPangramm(text2, ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT);
         System.out.println("\nIst '" + text2 + "' ein Pangramm? " + ergebnis2 + "\n");
     }
 
