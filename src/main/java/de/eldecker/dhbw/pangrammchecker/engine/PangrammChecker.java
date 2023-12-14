@@ -8,7 +8,7 @@ public class PangrammChecker  {
      *
      * @param text String, der auf Pangramm-Eigenschaft zu prüfen ist
      */
-    public static boolean istPangramm(String text) {
+    public static boolean istPangramm(String text, AlphabetEnum alphabet) {
 
         // Exception werfen, wenn Argument "text" null oder leer ist
         if (text == null || text.isBlank()) {
@@ -27,6 +27,7 @@ public class PangrammChecker  {
                 return false;
             }
         }
+
 
         return true;
     }
