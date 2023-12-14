@@ -1,5 +1,6 @@
 package de.eldecker.dhbw.pangrammchecker.engine;
 
+
 public class PangrammChecker  {
 
     /**
