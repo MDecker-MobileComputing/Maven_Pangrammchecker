@@ -10,6 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+import de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum;
+
 
 public class PangrammCheckerTest {
 
@@ -34,5 +36,29 @@ public class PangrammCheckerTest {
     @Test
     public void testNull() {
         assertThrows(IllegalArgumentException.class, () -> istPangramm(null, ALPHABET_ENGLISCH));
+    }
+
+    @Test
+    public void testPangramWithUmlauts() {
+        String pangramWithUmlauts = "Falsches Üben von Xylophonmusik quält jeden größeren Zwerg";
+        assertTrue(istPangramm(pangramWithUmlauts, AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE));
+    }
+
+    @Test
+    public void testPangramWithUmlautsAndEszett() {
+        String pangramWithUmlautsAndEszett = "Hallo Welt!";
+        assertFalse(istPangramm(pangramWithUmlautsAndEszett, AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT));
+    }
+
+    @Test
+    public void testNonPangramWithUmlauts() {
+        String nonPangramWithUmlauts = "Falsches Ueben von Xylophonmusik quält jeden größeren Zwerg."; // "ü" fehlt wegen Ersetzung durch "ue"
+        assertFalse(istPangramm(nonPangramWithUmlauts, AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE));
+    }
+
+    @Test
+    public void testNonPangramWithUmlautsAndEszett() {
+        String nonPangramWithUmlautsAndEszett = "Victor jagt zwölf Boxkämpfer quer über den breiten Sylter Deich."; // enthält kein ß
+        assertFalse(istPangramm(nonPangramWithUmlautsAndEszett, AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT));
     }
 }

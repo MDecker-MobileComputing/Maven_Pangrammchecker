@@ -1,13 +1,16 @@
 package de.eldecker.dhbw.pangrammchecker.engine;
 
-
+/**
+ * Die Klasse enthält eine Methode zum Prüfen, ob ein Text ein Pangramm ist.
+ */
 public class PangrammChecker  {
 
     /**
-     * Ein Pangramm ist ein Satz, der alle Buchstaben des Alphabets enthält.
+     * Prüft, ob der übergebene Text ein Pangramm ist. Ein Pangramm ist ein Satz, der
+     * alle Buchstaben eines bestimmten Alphabets enthält.
      *
      * @param text String, der auf Pangramm-Eigenschaft zu prüfen ist
-     * @param
+     * @param alphabet Alphabet, das für die Prüfung verwendet werden soll
      */
     public static boolean istPangramm(String text, AlphabetEnum alphabet) {
 
