@@ -9,12 +9,25 @@ import de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum;
 
 public class App  {
 
+    /**
+     * Checks if the given text is a pangram using the specified alphabet.
+     * Prints the result to the console.
+     *
+     * @param text     the text to be checked
+     * @param alphabet the alphabet to be used for checking
+     */
     public static void pruefeObPangramm(String text, AlphabetEnum alphabet) {
 
         boolean ergebnis = istPangramm(text, alphabet);
-        System.out.println("Ist '" + text + "' ein Pangramm? " + ergebnis + "\n");
+        System.out.println("Ist \"" + text + "\" ein Pangramm? " + ergebnis + "\n");
     }
 
+
+    /**
+     * Die Hauptmethode des Programms.
+     *
+     * @param args Die Befehlszeilenargumente (werden nicht ausgewertet)
+     */
     public static void main( String[] args ) {
 
         System.out.println();
@@ -33,6 +46,10 @@ public class App  {
 
         satz = "Falsches Üben von Xylophonmusik quält jeden größeren Zwerg";
         pruefeObPangramm(satz, ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT);
+
+        // mit Hilfe von ChatGPT erzeugt (hat Umlaute, aber kein "ß")
+        satz = "Victor jagt zwölf Boxkämpfer quer über den breiten Sylter Deich";
+        pruefeObPangramm(satz, ALPHABET_DEUTSCH_UMLAUTE);
 
         System.out.println();
     }
