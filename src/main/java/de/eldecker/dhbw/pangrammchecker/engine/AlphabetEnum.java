@@ -1,7 +1,7 @@
 package de.eldecker.dhbw.pangrammchecker.engine;
 
 /**
- * Enumerationsklasse für die unterstützten Alphabete.
+ * Eigener Aufzählungstyp für verschiedene Alphabete.
  */
 public enum AlphabetEnum {
 
