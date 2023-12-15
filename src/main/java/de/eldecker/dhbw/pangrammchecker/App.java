@@ -10,11 +10,11 @@ import de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum;
 public class App  {
 
     /**
-     * Checks if the given text is a pangram using the specified alphabet.
-     * Prints the result to the console.
+     * Überprüft, ob der angegebene Text ein Pangramm ist
+     * Gibt das Ergebnis in der Konsole aus.
      *
-     * @param text     the text to be checked
-     * @param alphabet the alphabet to be used for checking
+     * @param text     der zu überprüfende Text
+     * @param alphabet das Alphabet, das für die Überprüfung verwendet werden soll
      */
     public static void pruefeObPangramm(String text, AlphabetEnum alphabet) {
 
@@ -25,6 +25,9 @@ public class App  {
 
     /**
      * Die Hauptmethode des Programms.
+     * <br><br>
+     *
+     * Startet das Programm und überprüft einige Beispielsätze.
      *
      * @param args Die Befehlszeilenargumente (werden nicht ausgewertet)
      */
