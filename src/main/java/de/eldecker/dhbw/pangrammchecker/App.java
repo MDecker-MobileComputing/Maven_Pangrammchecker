@@ -1,6 +1,7 @@
 package de.eldecker.dhbw.pangrammchecker;
 
 import static de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum.ALPHABET_ENGLISCH;
+import static de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE;
 import static de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT;
 import static de.eldecker.dhbw.pangrammchecker.engine.PangrammChecker.istPangramm;
 
@@ -29,7 +30,6 @@ public class App  {
 
         satz = "Franz jagt im komplett verwahrlosten Taxi quer durch Bayern";
         pruefeObPangramm(satz, ALPHABET_ENGLISCH);
-
 
         satz = "Falsches Üben von Xylophonmusik quält jeden größeren Zwerg";
         pruefeObPangramm(satz, ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT);
