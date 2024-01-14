@@ -25,4 +25,6 @@ jobs:
       with:
         name: Pangrammchecker
         path: target/*jar-with-dependencies*.jar
+        retention-days: 7
+
 
