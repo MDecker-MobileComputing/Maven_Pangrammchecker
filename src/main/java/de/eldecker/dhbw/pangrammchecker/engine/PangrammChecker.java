@@ -22,7 +22,7 @@ public class PangrammChecker  {
         // Exception werfen, wenn Argument "text" null oder leer ist
         if ( text == null || text.isBlank() ) {
 
-            throw new IllegalArgumentException( "Argument 'text' darf nicht null oder leer sein!" );
+            throw new IllegalArgumentException( "Argument \"text\" darf nicht null oder leer sein!" );
         }
 
         final String textNormalisiert = text.toLowerCase().trim();
@@ -48,7 +48,7 @@ public class PangrammChecker  {
             }
         }
 
-        // wenn ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT, dann prüfe, ob ß im Text vorkommt
+        // wenn ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT, dann prüfen, ob ß im Text vorkommt
         if ( alphabet == ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT ) {
 
             if ( textNormalisiert.indexOf( 'ß' ) < 0 ) {
