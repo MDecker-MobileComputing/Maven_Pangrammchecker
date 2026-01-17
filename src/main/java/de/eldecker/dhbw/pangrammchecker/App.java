@@ -7,7 +7,10 @@ import static de.eldecker.dhbw.pangrammchecker.engine.PangrammChecker.istPangram
 
 import de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum;
 
-public class App  {
+/**
+ * Klasse mit Einstiegsmethode.
+ */
+public class App {
 
     /**
      * Überprüft, ob der angegebene Text ein Pangramm ist
