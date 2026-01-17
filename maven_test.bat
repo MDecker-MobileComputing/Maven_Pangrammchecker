@@ -1,0 +1,6 @@
+
+@cls
+
+mvnw test
+
+@echo.

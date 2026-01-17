@@ -20,13 +20,29 @@
     </license>
   </licenses>
 
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>21</maven.compiler.source>
+      <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+      <junit.version>6.0.1</junit.version>
+  </properties>
+
   <dependencies>
+
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
-        <version>5.10.1</version>
+        <version>${junit.version}</version>
         <scope>test</scope>
     </dependency>
+
+	  <dependency>
+		  <groupId>org.junit.platform</groupId>
+		  <artifactId>junit-platform-suite</artifactId>
+		  <version>${junit.version}</version>
+		  <scope>test</scope>
+	  </dependency>
+
   </dependencies>
 
   <build>
@@ -34,7 +50,7 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-assembly-plugin</artifactId>
-            <version>3.6.0</version>
+            <version>3.7.1</version>
             <configuration>
                 <descriptorRefs>
                     <descriptorRef>jar-with-dependencies</descriptorRef>
