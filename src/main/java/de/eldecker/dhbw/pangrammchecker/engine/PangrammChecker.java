@@ -1,5 +1,9 @@
 package de.eldecker.dhbw.pangrammchecker.engine;
 
+import static de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE;
+import static de.eldecker.dhbw.pangrammchecker.engine.AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT;
+
+
 /**
  * Die Klasse enthält eine Methode zum Prüfen, ob ein Text ein Pangramm ist.
  */
@@ -34,18 +38,18 @@ public class PangrammChecker  {
         }
 
         // wenn ALPHABET_DEUTSCH_UMLAUTE, dann prüfe, ob ä, ö, ü im Text vorkommen
-        if ( alphabet == AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE ) {
+        if ( alphabet == ALPHABET_DEUTSCH_UMLAUTE ) {
 
-            if ( textNormalisiert.indexOf('ä') < 0 || 
-            	 textNormalisiert.indexOf('ö') < 0 || 
-            	 textNormalisiert.indexOf('ü') < 0 ) {
+            if ( textNormalisiert.indexOf( 'ä' ) < 0 || 
+            	 textNormalisiert.indexOf( 'ö' ) < 0 || 
+            	 textNormalisiert.indexOf( 'ü' ) < 0 ) {
 
                 return false;
             }
         }
 
         // wenn ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT, dann prüfe, ob ß im Text vorkommt
-        if ( alphabet == AlphabetEnum.ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT ) {
+        if ( alphabet == ALPHABET_DEUTSCH_UMLAUTE_UND_ESZETT ) {
 
             if ( textNormalisiert.indexOf( 'ß' ) < 0 ) {
 
