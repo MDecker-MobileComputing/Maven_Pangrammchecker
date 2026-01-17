@@ -2,7 +2,7 @@
 
 <br>
 
-Dieses Git-Repo enthält ein einfaches Programm, das überprüft, ob bestimmte Strings
+Dieses Git-Repo enthält ein Maven-Projekt für ein einfaches Programm, das überprüft, ob bestimmte Strings
 ein [Pangramm](https://de.wikipedia.org/wiki/Pangramm) sind oder nicht.
 
 <br>
